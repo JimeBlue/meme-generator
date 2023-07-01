@@ -2,8 +2,8 @@
   <div class="meme-generator">
     <div class="image-container">
       <img :src="imageUrl" alt="Meme" />
-      <text-editor v-model="upperText" class="upper-text" />
-      <text-editor v-model="lowerText" class="lower-text" />
+      <text-editor v-model="upperText" transform="upper-text" />
+      <text-editor v-model="lowerText" transform="lower-text" />
     </div>
     <div class="controls">
       <input type="file" @change="handleFileUpload" accept="image/*" />
@@ -13,9 +13,13 @@
 </template>
 
 <script>
+import TextEditor from './TextEditor.vue';
+
 export default {
   name: 'MemeGenerator',
-  components: {},
+  components: {
+    TextEditor,
+  },
   data() {
     return {
       imageUrl: '',
