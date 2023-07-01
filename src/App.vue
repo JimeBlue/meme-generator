@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <meme-generator />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MemeGenerator from './components/MemeGenerator.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MemeGenerator,
+  },
+};
 </script>
 
 <style>
