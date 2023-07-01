@@ -1,5 +1,6 @@
 <template>
   <div class="meme-generator">
+    <h1 class="text-pink-500">Meme Generator</h1>
     <div class="image-container">
       <img :src="imageUrl" alt="Meme" />
       <text-editor v-model="upperText" transform="upper-text" />
