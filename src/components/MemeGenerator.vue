@@ -1,8 +1,7 @@
 <template>
   <div class="meme-generator">
     <h1 class="text-pink-500">Meme Generator</h1>
-    <div class="image-container">
-      <img :src="imageUrl" alt="Meme" />
+    <div class="bg-cover bg-center" :style="divStyle">
       <text-editor v-model="upperText" transform="upper-text" />
       <text-editor v-model="lowerText" transform="lower-text" />
     </div>
@@ -27,6 +26,13 @@ export default {
       upperText: '',
       lowerText: '',
     };
+  },
+  computed: {
+    divStyle() {
+      return {
+        'background-image': `url(${this.imageUrl})`,
+      };
+    },
   },
   methods: {
     handleFileUpload(event) {
